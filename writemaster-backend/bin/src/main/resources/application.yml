@@ -1,0 +1,40 @@
+jwt:
+  secret: WriteMaster
+
+spring:
+  application:
+    name: WriteMaster
+    description: A platform to share your thoughts. Open. Free. Ethical.
+  swagger:
+    version: v1.0
+  datasource:
+    url: jdbc:mysql://localhost:3306/writemaster_platform?useSSL=false
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+    tomcat:
+      validation-query: SELECT 1
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: false
+        generate_statistics: false
+        id:
+          new_generator_mappings: false
+        jdbc:
+          batch_size: 20
+          batch_versioned_data: true
+        order_inserts: true
+        order_updates: true
+        show_sql: true
+  sql:
+    init:
+      platform: mysql
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
+    locale: vi-VN
