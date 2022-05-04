@@ -1,0 +1,21 @@
+jwt:
+  secret: nashtech@rookies
+  timeout: 86400000
+spring:
+  application:
+    description: ShoppingCart Web App API Documentation
+    name: ShoppingCart Web App
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/shoppingcart?useSSL=false
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+  swagger:
+    version: v1.0
